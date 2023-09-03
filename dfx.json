@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "dashboard_backend": {
+      "main": "src/dashboard_backend/main.mo",
+      "type": "motoko"
+    },
+    "dashboard_frontend": {
+      "dependencies": [
+        "dashboard_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dashboard_frontend/src/index.html"
+      },
+      "source": [
+        "src/dashboard_frontend/assets",
+        "dist/dashboard_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
