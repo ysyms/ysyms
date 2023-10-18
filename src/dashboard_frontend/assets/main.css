@@ -3,12 +3,24 @@ body {
     font-size: 1.5rem;
 }
 
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
+.container {
+    display: flex;
+    align-items: center;  /* 垂直居中 */
 }
+
+img {
+    max-width: 20vw;
+    max-height: 10vw;
+    flex-shrink: 0;  /* 确保图片不缩小 */
+}
+
+#title {
+    font-size: 2vw;  /* 使用vw单位，随视口大小变化 */
+    display: block;
+    margin-left: calc(50% - 20vw - 4em) ;
+}
+
+
 
 form {
     display: flex;
